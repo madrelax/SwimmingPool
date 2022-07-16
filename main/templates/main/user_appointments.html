@@ -1,0 +1,9 @@
+{% extends 'main/base.html' %}
+{% block content %}
+    <h1>{{ title }}:</h1>
+    {% for a in appointments %}
+    <li>
+       <a href = "{{ a.get_absolute_url }}">{{ a.user_id }}/{{ a.dt }}</a>
+    </li>
+    {%  endfor %}
+{% endblock content %}
